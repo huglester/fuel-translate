@@ -21,11 +21,15 @@ namespace Fuel\Tasks;
 class Translate {
 	
 	// Bing APP ID
+	const APPPATH = 'stuff';
 	const APP_ID  = "D323329183BEA777086DACBEE261B1F3035F406F";
 	const REQ_URL = "http://api.microsofttranslator.com/v2/Http.svc/Translate";
 
-	public static function run($to, $from = "en", $dir_path = APPPATH.'lang')
+	public static function run($to, $from = "en", $dir_path = false)
 	{
+		if (!$dir_path) {
+			$dir_path = APPPATH.'lang';
+		}
 		
 		$translated_file_array = array();
 		$file_array = array();
@@ -56,7 +60,7 @@ class Translate {
 			
 			mkdir($dir_path.$to.'/');
 			
-			foreach($translated_file_array as $file = $data)
+			foreach($translated_file_array as $file => $data)
 			{
 				$php_data = \Format::to_php($data);
 				$new_file = <<<FILE
@@ -78,10 +82,12 @@ FILE;
 	{		
 		if (is_array($lang))
 		{
-			foreach($lang as $element)
+			$tmp_array = array();
+			foreach($lang as $label => $element)
 			{
-				self::translateLang($element,$from,$to);
+				$tmp_array[$label] = self::translateLang($element,$from,$to);
 			}
+			return $tmp_array;
 		}
 		else
 		{
