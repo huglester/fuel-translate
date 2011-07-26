@@ -15,6 +15,7 @@ Usage
 =====
 
 syntax:
+
 ```oil refine translate to from path```
 
  * **to** - (required) - target language (see list of available language codes below)
@@ -22,6 +23,7 @@ syntax:
  * **path** - (default = 'APPPATH/lang') - alternate directory of lang root 
 
 Examples:
+
  * ```oil refine translate es``` - Translates all lang files from English to Spanish
  * ```oil refine translate sk es``` - Translates all lang files from Spanish to Slovak
 
