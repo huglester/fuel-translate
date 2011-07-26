@@ -1,4 +1,4 @@
-<?
+<?php
 /***
  * Example Lang file to be used to test success
  */
