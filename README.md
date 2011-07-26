@@ -1,4 +1,4 @@
-**NOT READY FOR USE** -> **CURRENTLY IN DEVELOPMENT**
+**BETA QUALITY** -> **CURRENTLY IN DEVELOPMENT**
 
 Fuel-Translate
 ==============
