@@ -70,7 +70,7 @@ class Translate {
 			if ( !is_dir($lang_path.'/'.$from.'/'.$file) && !in_array($file, $ignore) )
 			{
 				\Cli::write("Translating lang file - $from/$file");
-				$file_array[$file] = eval('?> '.file_get_contents($lang_path.'/'.$from.'/'.$file));
+				$file_array[$file] = include $lang_path.'/'.$from.'/'.$file;						
 			}
 		}
 
