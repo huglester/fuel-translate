@@ -9,6 +9,8 @@ Once ran the translated Lang files are written in the proper location to be util
 
 This Task fully supports the fuel lang structure, including multidimensional arrays and retains original keywords (:keyword).
 
+We are Currently utilizing the Bing API Translation Services.
+
 Usage
 =====
 
@@ -19,8 +21,9 @@ syntax:
  * **from** - (default = 'en') - original language to use
  * **path** - (default = 'APPPATH/lang') - alternate directory of lang root 
 
-```oil refine translate es``` - Translates all lang files from English to Spanish
-```oil refine translate sk es``` - Translates all lang files from Spanish to Slovak
+Examples:
+ * ```oil refine translate es``` - Translates all lang files from English to Spanish
+ * ```oil refine translate sk es``` - Translates all lang files from Spanish to Slovak
 
 
 Languages Currently Supported
