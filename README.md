@@ -1,6 +1,26 @@
-**NOT READY FOR USE**
+**NOT READY FOR USE** -> **CURRENTLY IN DEVELOPMENT**
 
-**CURRENTLY IN DEVELOPMENT**
+Fuel-Translate
+==============
+
+This is a fuel (http://fuelphp.com) task that can be ran with the ```oil refine``` utility that will generate translations of any properly formatted lang files to and from any of the supported languages.
+
+Once ran the translated Lang files are written in the proper location to be utilized immediately, and will overwrite any existing files of the target language.
+
+This Task fully supports the fuel lang structure, including multidimensional arrays and retains original keywords (:keyword).
+
+Usage
+=====
+
+syntax:
+```oil refine translate to from path```
+
+ * **to** - (required) - target language (see list of available language codes below)
+ * **from** - (default = 'en') - original language to use
+ * **path** - (default = 'APPPATH/lang') - alternate directory of lang root 
+
+```oil refine translate es``` - Translates all lang files from English to Spanish
+```oil refine translate sk es``` - Translates all lang files from Spanish to Slovak
 
 
 Languages Currently Supported
