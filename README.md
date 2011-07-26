@@ -6,8 +6,8 @@
 Languages Currently Supported
 =============================
 
-ar - Arabic
-bg - Bulgarian
+ * ar - Arabic
+ * bg - Bulgarian
 ca - Catalan
 ?? - Chinese Simiplified
 zh - Chinese Traditional
