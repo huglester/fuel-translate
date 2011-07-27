@@ -101,9 +101,9 @@ FILE;
 
 			if(file_put_contents($lang_path.'/'.$to.'/'.$file, $new_file) === false)
 			{
-				/*
-					TODO ERROR
-				*/
+				\Cli::error("Could not write file at: $lang_path/$to");
+				\Cli::error("Exiting...");
+				exit();
 			}
 			else
 			{
@@ -128,7 +128,7 @@ FILE;
 			//extract placeholders
 			preg_match_all("/:\w+/", $lang, $placeholders);
 			$placeholders = $placeholders[0];
-			
+
 			//replace with meaningless placeholders
 			foreach($placeholders as $i=>$p)
 			{
@@ -138,17 +138,17 @@ FILE;
 			//translate
 			$reqUrl = self::REQ_URL
 
-	            // Common request fields (required)
-	            . "AppId=" . self::APP_ID
-	            . "&Query=" . urlencode($lang)
-	            . "&Sources=Translation"
+				// Common request fields (required)
+				. "AppId=" . self::APP_ID
+				. "&Query=" . urlencode($lang)
+				. "&Sources=Translation"
 
-	            // Common request fields (optional)
-	            . "&Version=2.2"
+				// Common request fields (optional)
+				. "&Version=2.2"
 
-	           // SourceType-specific fields (required)
-	            . "&Translation.SourceLanguage={$from}"
-	            . "&Translation.TargetLanguage={$to}";
+			   // SourceType-specific fields (required)
+				. "&Translation.SourceLanguage={$from}"
+				. "&Translation.TargetLanguage={$to}";
 
 			$response = json_decode(file_get_contents($reqUrl));
 			$translated_lang = $response->SearchResponse->Translation->Results[0]->TranslatedTerm;
