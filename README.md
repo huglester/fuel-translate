@@ -16,10 +16,10 @@ Usage
 
 syntax:
 
-```oil refine translate to from path```
+```oil refine translate target origin path```
 
- * **to** - (required) - target language (see list of available language codes below)
- * **from** - (default = 'en') - original language to use
+ * **target** - (required) - target language (see list of available language codes below)
+ * **origin** - (default = 'en') - original language to use
  * **path** - (default = 'APPPATH/lang') - alternate directory of lang root 
 
 Examples:
