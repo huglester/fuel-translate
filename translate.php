@@ -83,7 +83,7 @@ class Translate {
 			}
 		}
 
-		self::mkdir_recursive($lang_path.'/'.$to.'/', 0755);
+		mkdir($lang_path.'/'.$to.'/', 0755, true);
 
 		foreach($translated_file_array as $file => $data)
 		{
@@ -161,15 +161,6 @@ FILE;
 			
 			return $translated_lang;
 		}
-	}
-
-	/***
-	 * http://www.php.net/manual/en/function.mkdir.php#81656
-	 */
-	private static function mkdir_recursive($pathname, $mode)
-	{
-    	is_dir(dirname($pathname)) || self::mkdir_recursive(dirname($pathname), $mode);
-    	return is_dir($pathname) || @mkdir($pathname, $mode);
 	}
 }
 
