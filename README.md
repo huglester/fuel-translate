@@ -1,4 +1,3 @@
-**BETA QUALITY** -> **CURRENTLY IN DEVELOPMENT**
 
 Fuel-Translate
 ==============
