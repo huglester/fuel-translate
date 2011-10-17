@@ -1,4 +1,3 @@
-
 Fuel-Translate
 ==============
 
@@ -12,6 +11,8 @@ We are Currently utilizing the Bing API Translation Services.
 
 Usage
 =====
+
+First, understand that this task uses a Bing APP ID that is the one I used for testing in development of this app, if you plan to use it regularly I would go ahead and sign up for your own APP ID as there is no garauntee for this one to work consistently.  Sign up for your own APP ID here... https://datamarket.azure.com/dataset/1899a118-d202-492c-aa16-ba21c33c06cb
 
 syntax:
 
